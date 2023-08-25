@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Cabecalho from "../../components/cabecalho";
+import Secao from "../../components/secao";
+import Rodape from "../../components/rodape";
+export default function App(){
 
-function App() {
-  const [count, setCount] = useState(0)
+  // Area declarativa (pode declarar variavel/função/contantes/etc)
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {/* Comentário em JSX */}
+        
+        {/* Criando um header */}
+        <Cabecalho/>
+  
+        {/* Criando uma section de conteúdo */}
+        <Secao/>
+  
+        {/* Criando um rodapé */}
+        <Rodape/>
+        
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
+  
 }
-
-export default App
